@@ -1,20 +1,25 @@
-package com.github.vindell.validation.utils;
+package com.github.hiwepy.validation.utils;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
 
-/**
- */
-public class RegexpPatternUtils {
+public class JakartaRegexpUtils {
 
-	protected static Logger LOG = LoggerFactory.getLogger(RegexpPatternUtils.class);
 	protected static ConcurrentMap<String, Pattern> COMPLIED_PATTERN = new ConcurrentHashMap<String, Pattern>();
+	
+	/**
+	 * 正则表达式验证方法:匹配表达式则返回true,不匹配则返回false
+	 */
+	public static boolean matches(String regexp, String str) { 
+        Pattern pattern = getPattern(regexp); 
+        Matcher matcher = pattern.matcher(str); 
+        return matcher.matches(); 
+    }
 	
 	public static Pattern getPattern(String regexp) {
 		if (StringUtils.hasText(regexp)) {
@@ -31,7 +36,5 @@ public class RegexpPatternUtils {
 		}
 		return null;
 	}
-	
-	 
-	
+    
 }

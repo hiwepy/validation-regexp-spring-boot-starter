@@ -1,4 +1,4 @@
-package com.github.vindell.validation.utils;
+package com.github.hiwepy.validation.utils;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;

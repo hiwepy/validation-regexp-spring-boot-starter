@@ -1,4 +1,4 @@
-package com.github.vindell.validation.constraints;
+package com.github.hiwepy.validation.constraints;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

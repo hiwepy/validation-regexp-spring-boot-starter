@@ -1,4 +1,4 @@
-package com.github.vindell.validation.utils;
+package com.github.hiwepy.validation.utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
